@@ -11,7 +11,12 @@ cover:
     hidden: false # only hide on current single page
 ---
 
-Creating a new environment with **venv** (preferred)
+
+> This is a test post.
+
+## Python virtual environments
+
+Creating a new environment using **venv**:
 
 ```shell
 python3 -m venv <env_name>   # env_name usually venv
@@ -26,8 +31,9 @@ cd path-to-project
 virtualenv <env_name>  # Create enviroment
 ```
 
-By default, this will create an environment with all the packages available "system-wide".
-Export environment:
+By default, these will create an environment with all the packages available "system-wide".
+
+[Export the environment][1]:
 
 ``` shell
 pip freeze > requirements.txt
@@ -36,15 +42,16 @@ pip freeze > requirements.txt
 Recreate environment:
 
 ```shell
-$ virtualenv <env_name>
-$ source <env_name>/bin/activate
+$ # activate the env
 (<env_name>)$ pip install -r path/to/requirements.txt
 ```
 
-Source: [How to export virtualenv?](https://stackoverflow.com/questions/14684968/how-to-export-virtualenv), from stackoverflow
+## venv vs virtualenv
 
 What's the difference between `virtualenv <env_name>` and `python3 -m venv <env_name>`?
 
-> **venv**: It's the Python 3.3+ [stdlib package](https://docs.python.org/3/library/venv.html) whose purpose was to improve and replace the PyPi [virtualenv package](https://pypi.python.org/pypi/virtualenv) (see [PEP 405](https://www.python.org/dev/peps/pep-0405/)). But it seems it's not there yet (at least not as feature-complete). (*[source](https://askubuntu.com/questions/603935/pyvenv-vs-venv-vs-python-virtualenv-vs-virtualenv-and-python-3)*)
+> **venv**: It's the Python 3.3+ [stdlib package](https://docs.python.org/3/library/venv.html) whose purpose was to improve and replace the PyPi [virtualenv package](https://pypi.python.org/pypi/virtualenv) (see [PEP 405](https://www.python.org/dev/peps/pep-0405/)). But it seems it's not there yet (at least not as feature-complete). ([*source*](https://askubuntu.com/questions/603935/pyvenv-vs-venv-vs-python-virtualenv-vs-virtualenv-and-python-3))
 
-> virtualenv is a tool to create isolated Python environments. Since Python 3.3, a subset of it has been integrated into the standard library under the [venv module](https://docs.python.org/3/library/venv.html). The venv module does not offer all features of this library ... ([_source_](https://virtualenv.pypa.io/en/latest/))
+> virtualenv is a tool to create isolated Python environments. Since Python 3.3, a subset of it has been integrated into the standard library under the [venv module](https://docs.python.org/3/library/venv.html). The venv module does not offer all features of this library ... ([*source*](https://virtualenv.pypa.io/en/latest/))
+
+[1]: <https://stackoverflow.com/questions/14684968/how-to-export-virtualenv> "How to export virtualenv?"

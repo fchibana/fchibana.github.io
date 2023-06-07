@@ -1,7 +1,7 @@
 ---
-title: "About"
+title: "Portfolio"
 date: 2023-05-31T16:39:13+09:00
 draft: true
 ---
 
-This should be an about me section.
+Projects I've been working on...
